@@ -35,32 +35,32 @@ body {
   padding: 0 0;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index:100;
 }
 
 .navbar .container {
   display: flex;
- 
-  align-items: center;
   height: 100%;
+   align-items: center;
 }
 
 .logo {
   font-weight: bold;
   font-size: 1.2rem;
-  color: var(--secondary-color); /* Purple accent */
+  color: var(--secondary-color);
 }
 #icon{
-  width:20px ;
+  width:26px ;
   cursor: pointer;
   margin-left: 1.5rem;
+  height: 26px;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-text-align: right;
-gap: 1.5rem;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 nav a {
@@ -68,15 +68,58 @@ nav a {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+   align-items: center;
 }
 
 nav a:hover {
   color: var(--secondary-color);
 }
 #navbar {
-  margin-left: auto; /* ← C'est la clé ! */
+  margin-left: auto; 
+}
+.sidebar {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  z-index: 999;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  right: 0;
+  width: 250px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+  
+
+}
+.sidebar a{
+    width: 100%;
+padding: 15px;
+}
+/* Style for menu icon (☰) */
+.menu-icon {
+  fill: var(--secondary-color); /* Purple */
+  transition: fill 0.3s ease;
 }
 
+.menu-icon:hover {
+  fill:var(--secondary-color); 
+}
+
+
+.close-icon {
+ 
+  fill:var(--secondary-color) ;
+  transition: fill 0.3s ease;
+}
+
+.close-icon:hover {
+  fill: var(--secondary-color);
+}
 
 /* Hero Section */
 .hero {

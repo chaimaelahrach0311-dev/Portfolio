@@ -5,6 +5,15 @@ icon.onclick = function(){
         icon.src ="assets/sun-solid-24.png";
     }
     else{
-        icon.src ="assets/sun-solid-24.png";
+        icon.src ="assets/moon-solid-24.png";
     }
+}
+
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+function hideSidebar(){
+const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
 }
