@@ -7,11 +7,19 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
+:root{
+  --primary-color: #E9E9E9;
+  --secondary-color: #BC45EF;
+  }
+.dark-theme{
+  --primary-color: #000000;
+  --secondary-color: #0feb5c;
+}
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #E9E9E9;
+  background-color:var(--primary-color);
 }
 
 .container {
@@ -32,7 +40,7 @@ body {
 
 .navbar .container {
   display: flex;
-  justify-content: space-between;
+ 
   align-items: center;
   height: 100%;
 }
@@ -40,28 +48,35 @@ body {
 .logo {
   font-weight: bold;
   font-size: 1.2rem;
-  color: #BC45EF; /* Purple accent */
+  color: var(--secondary-color); /* Purple accent */
+}
+#icon{
+  width:20px ;
+  cursor: pointer;
+  margin-left: 1.5rem;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-}
-
-nav li {
-  margin-left: 1.5rem;
+text-align: right;
+gap: 1.5rem;
 }
 
 nav a {
-  color: #BC45EF; /* Purple accent */
+  color: var(--secondary-color); /* Purple accent */
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #BC45EF;
+  color: var(--secondary-color);
 }
+#navbar {
+  margin-left: auto; /* ← C'est la clé ! */
+}
+
 
 /* Hero Section */
 .hero {
@@ -75,7 +90,7 @@ nav a:hover {
 }
 
 .highlight {
-  color: #BC45EF; /* Purple for your name */
+  color: var(--secondary-color); /* Purple for your name */
 }
 
 .hero h2 {
@@ -107,14 +122,14 @@ nav a:hover {
 }
 
 .btn-primary {
-  background-color: #BC45EF;
+  background-color: var(--secondary-color);
   color: white;
-  border: 2px solid #BC45EF;
+  border: 2px solid var(--secondary-color);
 }
 
 .btn-primary:hover {
-  background-color: #BC45EF;
-  border-color: #BC45EF;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 .btn-secondary {
@@ -125,8 +140,8 @@ nav a:hover {
 
 .btn-secondary:hover {
   background-color: #f0f0f0;
-  color: #BC45EF;
-  border-color: #BC45EF;
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 /* Responsive Design */
@@ -157,7 +172,7 @@ nav a:hover {
 /* About Section */
 .about {
   padding: 4rem 0;
-  background-color: #E9E9E9;
+  background-color: var(--primary-color);
 }
 
 .about .container {
@@ -256,7 +271,7 @@ nav a:hover {
 /* Projects Section */
 .projects {
   padding: 4rem 0;
-  background-color: #E9E9E9;
+  background-color: var(--primary-color);
 }
 
 .projects .container {
@@ -367,7 +382,7 @@ nav a:hover {
 /* Skills Section */
 .skills {
   padding: 4rem 0;
-  background-color: #E9E9E9;
+  background-color: var(--primary-color);
 }
 
 .skills .container {
@@ -434,7 +449,7 @@ nav a:hover {
 
 .skill-list li::before {
   content: "•";
-  color: #BC45EF; /* Purple bullet */
+  color: var(--secondary-color); /* Purple bullet */
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -470,7 +485,7 @@ nav a:hover {
 /* Contact Section */
 .contact {
   padding: 4rem 0;
-  background-color: #E9E9E9;
+  background-color: var(--primary-color);
 }
 
 .contact .container {
@@ -556,11 +571,11 @@ nav a:hover {
 
 }
 .contact-inputs:focus{
-  border-color:#BC45EF; /* Purple focus */
+  border-color:var(--secondary-color); /* Purple focus */
 }
 
 .btn-primary:hover {
-  background-color: #BC45EF;
+  background-color: var(--secondary-color);
 }
 
 /* Responsive: Stack on mobile */
